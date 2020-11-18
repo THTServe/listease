@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listease/utilities/constants.dart';
+import 'package:listease/Screens/policy_dialog.dart';
 
 class InfoScreen extends StatelessWidget {
   @override
@@ -135,7 +136,7 @@ class InfoScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8.0, vertical: 2.0),
                       child: Text(
-                        'Want your lists and a different order? Hold on the item you want to move until it floats, move and then drop.',
+                        'Want your lists in a different order? Hold on the item you want to move until it floats, move and then drop.',
                         textScaleFactor: 1.2,
                       ),
                     ),
@@ -154,7 +155,7 @@ class InfoScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8.0, vertical: 2.0),
                       child: Text(
-                        'Double Tap a list entry to edit it\'s Title or Quantity.',
+                        'Double Tap a list entry to edit its Title or Quantity.',
                         textScaleFactor: 1.2,
                       ),
                     ),
@@ -184,60 +185,80 @@ class InfoScreen extends StatelessWidget {
                     Divider(
                       thickness: 2.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 4.0),
-                      child: Text(
-                        'Privacy Policy',
-                        textScaleFactor: 1.5,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 2.0),
-                      child: Text(
-                        'This App does not collect or send any data externally.  '
-                        'All data is used solely by the app and not shared in any way.',
-                        textScaleFactor: 1.2,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8.0, vertical: 4.0),
+                          child: Text(
+                            'Privacy Policy',
+                            textScaleFactor: 1.5,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                                color: kPinkButtonColour,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0))),
+                            child: FlatButton(
+                              onPressed: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PolicyDialog(
+                                            mdFileName: 'privacy.md',
+                                          ))),
+                              child: Text('Tap to Read',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: kTextFieldColour,
+                                  )),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     Divider(
                       thickness: 2.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 4.0),
-                      child: Text(
-                        'Terms Of Use',
-                        textScaleFactor: 1.5,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 2.0),
-                      child: Text(
-                        'Add Here',
-                        textScaleFactor: 1.2,
-                      ),
-                    ),
-                    Divider(
-                      thickness: 2.0,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 4.0),
-                      child: Text(
-                        'Contact Support',
-                        textScaleFactor: 1.5,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 2.0),
-                      child: Text(
-                        'Add Here',
-                        textScaleFactor: 1.2,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8.0, vertical: 4.0),
+                          child: Text(
+                            'Terms Of Use',
+                            textScaleFactor: 1.5,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                                color: kPinkButtonColour,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.0))),
+                            child: FlatButton(
+                              onPressed: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PolicyDialog(
+                                            mdFileName: 'terms.md',
+                                          ))),
+                              child: Text('Tap to Read',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: kTextFieldColour,
+                                  )),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

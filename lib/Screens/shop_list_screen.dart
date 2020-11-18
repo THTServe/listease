@@ -332,8 +332,8 @@ class _ShopListScreenState extends State<ShopListScreen> {
 
   deleteFrmShopList(String _value) async {
     TwoButtonStyledAlert deleteAlert = TwoButtonStyledAlert(
-      titleText: 'Deleting',
-      messageText: 'Delete $_value?',
+      titleText: 'Remove',
+      messageText: 'Remove $_value from List?',
     );
     showDialog(context: context, builder: (_) => deleteAlert).then((response) {
       if (response == true) {

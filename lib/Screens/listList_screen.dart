@@ -206,7 +206,7 @@ class _ListListScreenState extends State<ListListScreen> {
   deleteList(String _listName) {
     TwoButtonStyledAlert deleteAlert = TwoButtonStyledAlert(
       titleText: 'Warning',
-      messageText: 'Permanently remove $_listName?',
+      messageText: 'Permanently remove $_listName List?',
     );
     showDialog(context: context, builder: (_) => deleteAlert).then((response) {
       if (response == true) {

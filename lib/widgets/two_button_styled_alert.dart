@@ -85,7 +85,7 @@ class TwoButtonStyledAlert extends StatelessWidget {
                       color: kPinkButtonColour,
                       child: Center(
                         child: Text(
-                          rightButtonText != null ? rightButtonText : 'Delete',
+                          rightButtonText != null ? rightButtonText : 'Proceed',
                           style: TextStyle(
                             color: kTextPrimaryColour,
                           ),

@@ -2,14 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:listease/Screens/listList_screen.dart';
 import 'package:listease/utilities/constants.dart';
 
-//Todo - 'Remove' from list rather than 'delete 'in shop list page
-//Todo - Typo in instructions it's.
-//Todo -
-//Todo -
-//Todo -
-//Todo -
-//Todo -
-
 void main() {
   runApp(MyApp());
 }
